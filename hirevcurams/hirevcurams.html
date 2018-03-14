@@ -28,6 +28,22 @@
             color:blue;
             font-size:80%;
         }
+        /* Accessibility */
+        #submit:focus,
+        a:focus{
+          border:#333 1px solid;
+        }
+        .content p,
+        #recruiting .list-grid .coordinator,
+        #recruiting .list-grid .coordinator a{
+          /* Line 282 */
+          /* Line 396 */
+          color:#333;
+        }
+        #recruiting .list-grid h3{
+          /* Line 464 */
+          color:#7a4e00;
+        }
     </style>
 
   </head>
@@ -59,12 +75,12 @@
                     <ul>
 						<li class="row">
 							<div class="col-4 col">
-								<input id="username" name="username" placeholder="Employer username" type="text" class="" >
+								<input id="username" name="username" placeholder="Employer username" type="text" class="" aria-label="Employer username" >
 							</div>
 						</li>
 						<li class="row">
 							<div class="col-4 col">
-								<input id="pwd" name="pwd" placeholder="Password" type="password" class="" >
+								<input id="pwd" name="pwd" placeholder="Password" type="password" class="" aria-label="Password" >
 							</div>
 						</li>
                         <li class="row">
@@ -79,8 +95,7 @@
         </div>
       </header>
       <a name="maincontent" id="maincontent"></a><div id="mainContent" class="container">
-
-       <section id="connect-with-us">
+       <section id="connect-with-us" aria-label="Introduction">
            <div class="row content text-center">
                <div class="row">
                    <h2>You need talent.  We can help you find it.</h2>
@@ -98,11 +113,11 @@
                </div>
            </div>
        </section>
-       <section id="overview">
+       <section id="overview" aria-label="Overview">
            <div class="row content text-center">
                <div class="row">
                    <h2>Connect with Us</h2>
-                   <p><p>We work with more than 100,000 students and alumni from 150-plus majors and degree programs at&nbsp;<span class="text-nowrap">Virginia Commonwealth University</span>. Our three career centers provide specialized services to help you find the talent you’re seeking within VCU’s diverse student and alumni population.</p></p>
+                   <p>We work with more than 100,000 students and alumni from 150-plus majors and degree programs at&nbsp;<span class="text-nowrap">Virginia Commonwealth University</span>. Our three career centers provide specialized services to help you find the talent you’re seeking within VCU’s diverse student and alumni population.</p>
                </div>
                <div class="row">
                    <h3 class="centered-hdr-line">
@@ -122,7 +137,7 @@
                </div>
            </div>
        </section>
-       <section id="recruiting">
+       <section id="recruiting" aria-label="Recruiting">
          <div class="row content text-center">
            <div class="row">
                <h2>Recruiting at a Glance</h2>
@@ -197,7 +212,7 @@
            </div>
          </div>
        </section>
-       <section id="why-vcu">
+       <section id="why-vcu" aria-label="Why VCU?">
            <div class="row content text-center">
                <div class="row">
                    <div class="text-center">
@@ -228,7 +243,7 @@
                </div>
            </div>
        </section>
-       <section id="leaders">
+       <section id="leaders" aria-label="Leaders in Education">
            <div class="row content text-center">
                <div class="row">
                    <h2>Leaders in Education</h2>
@@ -357,7 +372,7 @@
                </div>
                <div class="row">
                    <p>
-                       <a href="https://egr.vcu.edu/academics/career-services/">VCU Engineering Career Services</a><br>
+                       <a href="http://www.egr.vcu.edu/academics/career-services/">VCU Engineering Career Services</a><br>
                        Phone: (804) 828-8548<br>
                        Email: <a href="mailto:Engrcareers@vcu.edu">Engrcareers@vcu.edu</a>
                </p>
