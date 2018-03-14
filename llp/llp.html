@@ -21,7 +21,7 @@
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 				<link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" type='text/css'>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet" type='text/css'>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" type='text/css'>
 
       	<script src="https://use.fontawesome.com/d126e05ba0.js"></script>
@@ -29,12 +29,63 @@
         <!-- Common T4 Tag: Site-Head -->
 
         <!-- Plugin T4 Tag: Style -->
+        <style>
+        .slick-prev:focus,
+        .slick-next:focus,
+        .bg-img:focus,
+        .slick-dots button:focus,
+        .slick-slide:focus{
+          border:green 1px solid;
+        }
+          a:focus{
+            border:#333 1px solid;
+          }
+          a.skip-links-item {
+           font-size: 14px;
+           text-decoration: underline;
+           position: absolute;
+           left: 15px;
+           top: -100px;
+           z-index: 10000;
+           height: auto;
+           margin: 0 auto;
+           padding: 10px 15px;
+           background-color: transparent;
+           color: #ffba00;
+           outline: none;
+           transition: top .2s,background-color .2s;
+          }
 
+          a.skip-links-item:active,
+          a.skip-links-item:focus {
+           top: 0;
+           background-color: #272727;
+          }
+
+          #skip-links {
+           position: absolute;
+           left: 0;
+           top: 0;
+           width: 100%;
+           margin-left: 0;
+           list-style: outside none;
+          }
+          a{
+            font-weight:bold;
+          }
+          .btn-primary{
+            background-color:#894506 !important;
+          }
+          .btn-primary:hover{
+            background-color:#000 !important;
+          }
+        </style>
     </head>
     <body id="page-top">
-        <a href="#maincontent" class="skipnav" style="display:none;">Skip to main content</a>
-
-
+      <div id="skip-links">
+        <a href="#maincontent" class="skip-links-item" tabindex="1">Skip to main content</a>
+        <a href="#footer" class="skip-links-item" tabindex="1">Skip to footer</a>
+      </div>
 
       <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fluid">
@@ -80,7 +131,7 @@
     <!-- Header - Start -->
     <header>
       <div class="header-content">
-				<div class="header-content-inner">
+				<div class="header-content-inner" title="Find out more">
           <img id="sm-logo" class="visible-xs" src="https://llp.vcu.edu/media/living-learning-program/images/logo.png" alt="" />
 					<h1 id="homeHeading" class="visible-xs">Living-Learning Programs</h1>
 					<hr class="visible-xs">
@@ -89,9 +140,9 @@
 				</div>
 			</div>
 
-      <div class="header-background hidden-xs">
-        <div class="bg-carousel">
-          <div class="bg-img" id="img9"></div>
+      <div class="header-background hidden-xs" title="header area">
+        <div class="bg-carousel" title="Image carousel">
+          <div class="bg-img"><img src="images/bg13.jpg" alt="" /></div>
           <div class="bg-img" id="img1"></div>
           <div class="bg-img" id="img110"></div>
           <div class="bg-img" id="img8"></div>
@@ -114,7 +165,7 @@
       <!--Slideshow Slides -->
 
       <div id="maincontent"></div>
-      <section id="about" class="pattern-bot">
+      <section id="about" class="pattern-bot" aria-label="About">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -127,7 +178,7 @@
         </div>
     </div>
 </section>
-      <section id="events" class="bg-dark pattern-right">
+      <section id="events" class="bg-dark pattern-right" aria-label="Events">
 	<div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1 text-center">
@@ -204,7 +255,7 @@ Innovate &amp; LEAD- Grace &amp; Broad Residence Center</div>
 		</div>
 	</div>
 </section>
-      <section id="tesimonial" class="pattern-bot">
+      <section id="tesimonial" class="pattern-bot" aria-label="Testimonials">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-10 col-lg-offset-1 text-center">
@@ -419,7 +470,7 @@ Innovate &amp; LEAD- Grace &amp; Broad Residence Center</div>
 		</div>
 	</div>
 </section>
-			<section class="no-padding" id="llp">
+			<section class="no-padding" id="llp" aria-label="LLP sections">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="llp-cards aspire col-lg-3 col-sm-6">
@@ -428,7 +479,7 @@ Innovate &amp; LEAD- Grace &amp; Broad Residence Center</div>
         <hr class="light">
     </div>
     <div class="more">
-        <a href="http://aspire.vcu.edu/" class="btn btn-default sr-button">Learn more</a>
+        <a href="http://aspire.vcu.edu/" class="btn btn-default sr-button">Learn about ASPiRE</a>
     </div>
 </div><div class="llp-cards globe col-lg-3 col-sm-6">
     <div class="heading">
@@ -436,7 +487,7 @@ Innovate &amp; LEAD- Grace &amp; Broad Residence Center</div>
         <hr class="light">
     </div>
     <div class="more">
-        <a href="http://www.global.vcu.edu/vcuglobe/" class="btn btn-default sr-button">Learn more</a>
+        <a href="http://www.global.vcu.edu/vcuglobe/" class="btn btn-default sr-button">Learn about GLOBE</a>
     </div>
 </div><div class="llp-cards lead col-lg-3 col-sm-6">
     <div class="heading">
@@ -444,7 +495,7 @@ Innovate &amp; LEAD- Grace &amp; Broad Residence Center</div>
         <hr class="light">
     </div>
     <div class="more">
-        <a href="https://students.vcu.edu/vculead/" class="btn btn-default sr-button">Learn more</a>
+        <a href="https://students.vcu.edu/vculead/" class="btn btn-default sr-button">Learn about LEAD</a>
     </div>
 </div><div class="llp-cards innovate col-lg-3 col-sm-6">
     <div class="heading">
@@ -452,7 +503,7 @@ Innovate &amp; LEAD- Grace &amp; Broad Residence Center</div>
         <hr class="light">
     </div>
     <div class="more">
-        <a href="http://www.davincicenter.vcu.edu/programs/vcuinnovatellp/" class="btn btn-default sr-button">Learn more</a>
+        <a href="http://www.davincicenter.vcu.edu/programs/vcuinnovatellp/" class="btn btn-default sr-button">Learn about INNOVATE</a>
     </div>
 </div>
 				</div>
@@ -504,7 +555,7 @@ Innovate &amp; LEAD- Grace &amp; Broad Residence Center</div>
 </aside>
 
         <!-- Footer - Start -->
-        <footer>
+        <footer id="footer">
             <!-- Common T4 Tag: Site-Footer -->
 
 
@@ -520,7 +571,7 @@ Innovate &amp; LEAD- Grace &amp; Broad Residence Center</div>
         <!-- Plugin JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 				<script src="https://llp.vcu.edu/media/living-learning-program/css/js/scrollreveal.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 				<script src="//branding.vcu.edu/bar/academic/latest.js"></script>
 
         <!-- Theme JavaScript -->
