@@ -11,9 +11,9 @@
         <link rel="apple-touch-icon" href="https://recsports.vcu.edu/media/student-affairs/recreational-sports/images/global/apple-touch-icon.png">
         <link rel="icon" type="image/png" href="https://recsports.vcu.edu/media/student-affairs/recreational-sports/images/global/favicon.png">
 				<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-        <link rel="stylesheet" href="https://recsports.vcu.edu/media/student-affairs/recreational-sports/css/dropitTwo.css" /> <!-- dropitTwo.css -->
+        <link rel="stylesheet" href="css/dropitTwo.css" /> <!-- dropitTwo.css -->
         <!--<link rel="stylesheet" href="https://recsports.vcu.edu/media/student-affairs/recreational-sports/css/dropit.css">-->
-        <link rel="stylesheet" href="https://recsports.vcu.edu/media/student-affairs/recreational-sports/css/main.css"> <!-- main.css -->
+        <link rel="stylesheet" href="css/main.css"> <!-- main.css -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://recsports.vcu.edu/media/student-affairs/recreational-sports/css/slick.css"> <!-- slick.css -->
         <link rel="stylesheet" href="https://recsports.vcu.edu/media/student-affairs/recreational-sports/css/slick-theme.css"> <!-- slick-theme.css -->
@@ -125,13 +125,21 @@
           <a href="/"><img src="https://recsports.vcu.edu/media/student-affairs/recreational-sports/images/global/img-recsports-logo.png" alt="RecSports at VCU" /></a>
         </div><!-- /mobile-logo-->
 
+        <nav id="nav">
+          <ul>
+            <li id="toggleMenu" role="button" aria-haspopup="true">
 
+					<a href="/sitemap.html">
+						<i aria-hidden="true" class="fa fa-bars"></i> <i aria-hidden="true" class="fa fa-times"></i>
 
-        <nav>
-          <div class="nav-container">
-            <ul class="randy">
-              <li><a href="/"><img src="https://recsports.vcu.edu/media/student-affairs/recreational-sports/images/global/img-recsports-logo.png" alt="Recreational Sports" /></a></li>
-              <li><a href="/programs/">Programs</a>
+						<!-- As icons are being used to represent open/close,
+							provide hidden text for screen readers -->
+						<span id="toggleMenu-text">Toggle Navigation</span>
+
+					</a>
+				</li>
+            <li><a href="/"><img src="https://recsports.vcu.edu/media/student-affairs/recreational-sports/images/global/img-recsports-logo.png" alt="Recreational Sports" /></a></li>
+            <li><a href="/programs/">Programs</a>
 <ul class="multilevel-linkul-0">
 <li><a href="/programs/aquatics/">Aquatics</a>
 <ul class="multilevel-linkul-1">
@@ -224,7 +232,7 @@
 
 </ul>
 
-<i class="fa fa-chevron-down" aria-hidden="true"></i></li><li><a href="/facilities/">Facilities</a>
+</li><li><a href="/facilities/">Facilities</a>
 <ul class="multilevel-linkul-0">
 <li><a href="/facilities/facility-hours/">Facility Hours</a></li>
 <li><a href="/facilities/rentals-and-reservations/">Rentals and Reservations</a></li>
@@ -232,7 +240,7 @@
 
 </ul>
 
-<i class="fa fa-chevron-down" aria-hidden="true"></i></li><li><a href="/membership/">Membership</a>
+</li><li><a href="/membership/">Membership</a>
 <ul class="multilevel-linkul-0">
 <li><a href="/membership/membership-rates/">Membership Types and Rates</a></li>
 <li><a href="/membership/locker-and-towel-rentals/">Locker and Towel Rentals</a></li>
@@ -240,7 +248,7 @@
 
 </ul>
 
-<i class="fa fa-chevron-down" aria-hidden="true"></i></li><li><a href="/join-our-team/">Join Our Team</a>
+</li><li><a href="/join-our-team/">Join Our Team</a>
 <ul class="multilevel-linkul-0">
 <li><a href="/join-our-team/">Join Our Team Home</a></li>
 <li><a href="/join-our-team/our-values-and-organization/">Our Values and Organization</a></li>
@@ -253,7 +261,7 @@
 
 </ul>
 
-<i class="fa fa-chevron-down" aria-hidden="true"></i></li><li><a href="/about/">About</a>
+</li><li><a href="/about/">About</a>
 <ul class="multilevel-linkul-0">
 <li><a href="/about/">Mission, Vision, and Values</a></li>
 <li><a href="/about/staff/">Staff</a></li>
@@ -264,14 +272,15 @@
 
 </ul>
 
-<i class="fa fa-chevron-down" aria-hidden="true"></i></li>
-              <li><a href="https://portal.recsports.vcu.edu/" class="portal"><i class="fa fa-lock" aria-hidden="true"></i>MyRecSports</a></li>
-              <li class="fb"><a href="https://www.facebook.com/recsportsvcu"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
-              <li class="tw"><a href="https://twitter.com/VCURecSports"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
-              <li class="insta"><a href="http://instagram.com/vcu_recsports"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
-            </ul>
-          </div><!-- /nav-container-->
-        </nav>
+</li>
+            <li><a href="https://portal.recsports.vcu.edu/" class="portal"><i class="fa fa-lock" aria-hidden="true"></i>MyRecSports</a></li>
+            <li class="fb"><a href="https://www.facebook.com/recsportsvcu"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+            <li class="tw"><a href="https://twitter.com/VCURecSports"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+            <li class="insta"><a href="http://instagram.com/vcu_recsports"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+          </ul>
+      </nav>
+
+
           <div id="maincontent"></div>
 
 
@@ -358,6 +367,7 @@
       <script src="https://recsports.vcu.edu/media/student-affairs/recreational-sports/js/sss.js"></script>
       <script src="https://recsports.vcu.edu/media/student-affairs/recreational-sports/js/one.js"></script>
       <!--<script src="https://recsports.vcu.edu/media/student-affairs/recreational-sports/js/dropit.js"></script>-->
+      <script src="js/dropit.js"></script>
 
       <script src="//use.typekit.net/ekg0cia.js"></script>
       <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -369,14 +379,6 @@
         $('.facSlider').sss({
           slideShow: false,
           speed : 5000
-        });
-      });
-      </script>
-
-      <script>
-      $(document).ready(function($) {
-        $('.randy').dropit({
-          //action: 'hover'
         });
       });
       </script>
